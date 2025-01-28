@@ -4,7 +4,7 @@ const Button = ({
     onClick,
     iconSrc,
     iconAlt = 'Icono',
-    size = '65px',
+    size = 65,
     bgColor = 'bg-customViolet-700/75',
     textColor = 'text-white',
     borderColor = 'border-slate-500'
@@ -13,7 +13,7 @@ const Button = ({
         <button
             className={`cursor-pointer ${bgColor} 
                   shadow-[0px_4px_32px_0_rgba(99,102,241,.70)] 
-                  px-5 py-3 w-[${size}] h-[${size}] 
+                  px-5 py-3 w-[${size}px] h-[${size}px] 
                   rounded-xl border-[1px] ${borderColor} ${textColor} font-medium group`}
             onClick={onClick}
         >
