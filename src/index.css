@@ -11,5 +11,7 @@
     --color-customViolet-100: #FEECFF;
 
     --font-custom: "Karla", serif;
+
+    --shadow-custom: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
     
   }
