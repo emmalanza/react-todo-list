@@ -24,7 +24,7 @@ https://emmalanza.github.io/react-todo-list/
 ### 1. Requisitos previos
 
 Para ejecutar esta aplicación, necesitas tener Node.js instalado en tu máquina. 
-Puedes descargarlo desde aquí: https://nodejs.org/en.
+Puedes descargarlo desde aquí: https://nodejs.org/en
 
 ### 2. Clonar el repositorio
 
