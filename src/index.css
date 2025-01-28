@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+
+    --color-customViolet-700: #322C56;
+    --color-customViolet-600: #8E94F2;
+    --color-customViolet-500: #ADA7FF;
+    --color-customViolet-400: #CBB2FE;
+    --color-customViolet-300: #E0C3FC;
+    --color-customViolet-200: #FCD6F4;
+    --color-customViolet-100: #FEECFF;
+
+    --font-custom: "Karla", serif;
+    
+  }
