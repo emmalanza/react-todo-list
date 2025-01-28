@@ -15,12 +15,16 @@ Una simple aplicación de lista de tareas construida con React y Tailwind CSS. E
 - **Tailwind CSS**: Framework de CSS para diseño de interfaces de usuario rápidas y personalizables.
 - **JavaScript (ES6)**: Para la lógica de la aplicación.
 
+## Demo 
+
+https://emmalanza.github.io/react-todo-list/
+
 ## Instalación
 
 ### 1. Requisitos previos
 
-    Para ejecutar esta aplicación, necesitas tener Node.js instalado en tu máquina. 
-    Puedes descargarlo desde aquí: https://nodejs.org/en.
+Para ejecutar esta aplicación, necesitas tener Node.js instalado en tu máquina. 
+Puedes descargarlo desde aquí: https://nodejs.org/en.
 
 ### 2. Clonar el repositorio
 
