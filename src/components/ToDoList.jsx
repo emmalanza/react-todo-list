@@ -37,6 +37,12 @@ export default function ToDoList() {
     setTasks(updatedTasks);
 
   }
+  function deleteCompletedTask(index) {
+
+    const updatedTasks = completedTasks.filter((_, i) => i !== index);
+    setCompletedTasks(updatedTasks);
+
+  }
 
   function moveTaskUp(index) {
 
@@ -59,42 +65,47 @@ export default function ToDoList() {
   }
 
   return (
-    <section className="hidden sm:flex flex-col md:flex-row justify-between items-start gap-6 
-    mt-4 sm:mt-6 lg:mt-10 px-4 sm:px-6 lg:px-8">
+  
+    <section className="flex flex-col lg:flex-row justify-between items-start gap-6 h-full
+    px-4 py-6">
 
-      <div className="flex-1 w-full md:w-1/2 p-6 sm:p-8 shadow-custom hover:shadow-xl transition-shadow duration-300 
-      rounded-2xl flex flex-col h-[500px] sm:h-[600px]">
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 text-center">To Do List</h2>
+      <div className="flex-1 w-full lg:w-1/2 p-6 shadow-custom 
+      rounded-2xl flex flex-col h-full">
 
-        <div className="mb-4 flex flex-col sm:flex-row justify-center items-center gap-4">
+        <h2 className="text-xl lg:text-3xl font-bold mb-4 text-center">To Do List</h2>
+
+        <div className="mb-4 flex flex-col lg:flex-row justify-center items-center gap-4">
           <input
-            className="text-sm sm:text-base lg:text-lg p-3 rounded-md border border-gray-300 w-full sm:w-3/4 lg:w-4/5"
+            className="text-sm lg:text-lg p-3 rounded-md border border-gray-300 w-2/4 lg:w-[450px]"
             type="text"
             placeholder="Añade una tarea"
             value={newTask}
             onChange={handleInputChange}
           />
           <button
-            className="text-sm sm:text-base lg:text-lg font-bold py-2 px-3 rounded-md bg-customViolet-700 transition-transform duration-300 hover:bg-customViolet-600 hover:scale-105 w-full sm:w-auto"
+            className="text-sm lg:text-lg font-bold py-2 px-3 
+            rounded-md bg-customViolet-700 transition-transform duration-300 hover:bg-customViolet-600 hover:scale-105 
+            w-2/4 lg:w-[100px]"
             onClick={addTask}
           >
             Añadir
           </button>
         </div>
 
-        <ol className="flex-1 overflow-y-auto px-2 space-y-3 w-full">
+        <ol className="flex-1 overflow-y-auto custom-scroll px-2 space-y-3 w-full">
           {tasks.map((task, index) => (
             <li
-              className="text-sm sm:text-base lg:text-lg font-medium p-4 h-[100px]
-               bg-customViolet-600 rounded-lg 
-               flex flex-col lg:flex-row items-center"
+              className="text-sm font-medium p-4 
+              w-[300px] sm:w-[450px] h-[120px] 
+              bg-customViolet-600 rounded-lg 
+              flex flex-col items-center justify-self-center sm:flex-row sm:justify-between"
               key={index}
             >
-              <span className="break-words whitespace-normal flex-1 overflow-hidden text-ellipsis 
+              <span className="break-words whitespace-normal overflow-hidden text-ellipsis 
               pr-2 mb-4 lg:mb-0">
                 {task}
               </span>
-              <div className="flex gap-2">
+              <div>
                 <Button
                   onClick={() => completeTask(index)}
                   iconSrc={checkIcon}
@@ -129,28 +140,39 @@ export default function ToDoList() {
         </ol>
       </div>
 
-      <div className="flex-1 w-full md:w-1/2  p-6 sm:p-8 shadow-custom hover:shadow-xl transition-shadow duration-300 
-      rounded-2xl flex flex-col h-[500px] sm:h-[600px]">
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 text-center">Done</h2>
+      <div className="flex-1 w-full lg:w-1/2  p-6 shadow-custom  
+      rounded-2xl flex flex-col h-full">
+        <h2 className="text-xl lg:text-3xl font-bold mb-4 text-center">Done</h2>
 
-        <ol className="flex-1 overflow-y-auto px-2 space-y-3 w-full">
+        <ol className="flex-1 overflow-y-auto custom-scroll px-2 space-y-3 w-full">
           {completedTasks.map((task, index) => (
             <li
-              className="text-sm sm:text-base lg:text-lg font-medium p-4 h-[100px]
+              className="text-sm font-medium p-4 
+              w-[300px] sm:w-[450px] h-[120px] 
               bg-[#c5dce4]/80 rounded-lg 
-              flex items-center"
+              flex flex-col items-center justify-self-center sm:flex-row sm:justify-between"
               key={index}
             >
-              <img src={checkIcon} alt="Completada" className="w-10 h-10 mr-4"/>
-              <span className="flex-1 break-words whitespace-normal overflow-hidden text-ellipsis pr-2
-              line-through text-gray-500">
-                {task}
-              </span>
+              <div className="pr-2 mb-4 lg:mb-0">
+                <img src={checkIcon} alt="Completada" className="hidden sm:inline w-10 h-10 mr-4"/>
+                <span className="break-words whitespace-normal overflow-hidden text-ellipsis 
+                line-through text-gray-500"
+              >
+                  {task}
+                </span>
+              </div>
+              <Button
+                  onClick={() => deleteCompletedTask(index)}
+                  iconSrc={deleteIcon}
+                  iconAlt="Borrar tarea"
+                  bgColor="bg-customViolet-700"
+                  borderColor="border-slate-500"
+                />
             </li>
           ))}
         </ol>
       </div>
-    </section>
-  );
+   </section>
+);
 
 }
