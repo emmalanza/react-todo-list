@@ -1,46 +1,50 @@
-# To Do List App
+# Todo List - Vite React
 
-Una simple aplicación de lista de tareas construida con React y Tailwind CSS. Esta aplicación te permite añadir, eliminar y reorganizar tareas.
+Simple todo list en la que puedes, crear tareas, marcarlas como completadas, borrarlas y moverlas hacia arriba y hacia abajo.
 
-## Características
+## 🌐 Demo
 
-- **Añadir tareas**: Puedes añadir nuevas tareas a la lista.
-- **Eliminar tareas**: Elimina tareas de la lista.
-- **Reordenar tareas**: Mueve las tareas hacia arriba o hacia abajo para cambiar su orden.
-- **Responsive**: La aplicación se adapta a diferentes tamaños de pantalla.
+¡Prueba el proyecto en vivo! 🎉  
+[**Todo List React**](https://emmalanza.github.io/react-todo-list/)
 
-## Tecnologías utilizadas
+## 👩🏻‍💻 Tecnologías
 
-- **React**: Biblioteca para construir interfaces de usuario.
-- **Tailwind CSS**: Framework de CSS para diseño de interfaces de usuario rápidas y personalizables.
-- **JavaScript (ES6)**: Para la lógica de la aplicación.
+- **React**
+- **Vite**
+- **Tailwind CSS**
 
-## Demo 
+## 📦 Requisitos
 
-https://emmalanza.github.io/react-todo-list/
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-## Instalación
+- [Node.js](https://nodejs.org/) (versión 12 o superior)
 
-### 1. Requisitos previos
+## 💻 Instalación
 
-Para ejecutar esta aplicación, necesitas tener Node.js instalado en tu máquina. 
-Puedes descargarlo desde aquí: https://nodejs.org/en
+Para clonar e instalar este proyecto, sigue estos pasos:
 
-### 2. Clonar el repositorio
+1. Clona este repositorio a tu máquina local:
 
-    ```bash
-    git clone  https://github.com/emmalanza/react-todo-list.git
+   ```bash
+   git clone https://github.com/emmalanza/react-todo-list.git
+
+2. Accede al directorio del proyecto:
+
     cd react-todo-list
-    ```
 
-### 3. Instalar dependencias
+3. Instala las dependencias:
 
     ```bash
     npm install
-    ```
+    # o si usas yarn
+    yarn install
 
-### 4. Iniciar el proyecto
+## 🚀 Ejecución del Proyecto
 
-    ```bash
+Una vez que las dependencias estén instaladas, puedes iniciar el servidor de desarrollo local:
+
     npm run dev
-    ```
+    # o si usas yarn
+    yarn dev
+
+
